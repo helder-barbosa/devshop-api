@@ -16,7 +16,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
         type: 'postgres',
         url: configService.get('DATABASE_URL'),
         autoLoadEntities: true,
-        synchronize: true
+        synchronize: true,
+        logging: true
       })
     }),
     GraphQLModule.forRoot({
